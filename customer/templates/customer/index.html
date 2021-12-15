@@ -1,0 +1,25 @@
+{% extends 'customer/base.html' %}
+
+{% block content %}
+<div class="banner-content" style="background-image:linear-gradient(to right, rgb(255,255,0), rgb(114,184,95,.3));width:100%;box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.5);margin-bottom:2%;">
+  <div class="row" style="height:100%;">
+    <div class="col-md-7" style="padding-left:20px;height:100%;text-align:left;argin-top:10%;padding:5%;">
+      
+       <h1 style="font-size:50px;font-weight:900;color:indigo;">In-N-Out</h1>
+      <h4 style="font-weight:600;color:Blue;">Only Delicious and Fresh Ingredients</h4>
+     <br>
+    
+    
+    <a href="{% url 'order' %}" button type="button" class="btn btn-secondary btn-rounded position-middle">Order Now!</button></a>
+    
+    </div>
+
+    <div class="col-md-5" style="background-color:#f7f7f7;border-top-left-radius:50%;border-bottom-left-radius:50%;text-align:center;align-items:center;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);">
+      <!-- border-bottom-right-radius:100%; -->
+      <img src="/media/menu_images/home_page_2.jpg" style="width:85%;height:80%;border:20px solid white;border-radius:50%;display:inline-block;margin:10%;box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);transform:rotate(3.5deg)" alt="">
+    </div>
+  </div>
+
+</div>
+
+{% endblock content %}

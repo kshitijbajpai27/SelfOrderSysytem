@@ -1,0 +1,308 @@
+{% extends 'customer/base.html' %}
+
+{% block content %}
+
+
+
+
+
+
+
+<div class="container">
+<div class="container mb-5">
+    <div class="row justify-content-center mt-1">
+        <div class="col-md-12 col-sm-12 p-4">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="pt-5">
+                <!--Section: Block Content-->
+                <section>
+                        
+                
+                    <!-- Grid row -->
+                    <div class="row">
+                {% for fastfood in fastfoods %}
+                        <!-- Grid column -->
+                        <div class="col-md-4 mb-5">
+                
+                            <!-- Card -->
+                            <div class="">
+                
+                                <div class="view zoom overlay z-depth-2 rounded">
+                                    <img class="img-fluid w-100" src="{{ fastfood.image.url }}" alt="Sample">
+                                    <a href="#!">
+                                        <div class="mask">
+                                            <img class="img-fluid w-100" src="{{ fastfood.image.url }}">
+                                            <div class="mask rgba-black-slight"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                
+                                <div class="text-center pt-4">
+                
+                                    <h5>{{ fastfood.name }}</h5>
+                                    <p class="mb-2 text-muted text-uppercase small"></p>
+                                    <ul class="rating">
+                                    </ul>
+                                    <hr>
+                                    <h6 class="mb-3">₹. {{ fastfood.price }}</h6>
+                                    <p>{{ fastfood.description }}</p>
+                                    <!-- Material unchecked -->
+                                    <div class="form-check">
+                                        <input type="checkbox" name="items[]" value="{{ fastfood.pk }}" class="form-check-input"
+                                            id="materialUnchecked">
+                                        <label class="form-check-label" for="materialUnchecked">Add</label>
+                                    </div>
+                
+                                </div>
+                
+                
+                            </div>
+                            <!-- Card -->
+                
+                        </div>
+                        <!-- Grid column -->
+                {% endfor %}
+                    </div>
+                    <!-- Grid row -->
+                    
+                </section>
+                <!--Section: Block Content-->
+
+
+
+                <!--Section: Block Content-->
+                <section>
+                    
+
+                    <!-- Grid row -->
+                    <div class="row">
+{% for soup in soups %}
+                        <!-- Grid column -->
+                        <div class="col-md-4 mb-5">
+
+                            <!-- Card -->
+                            <div class="">
+
+                                <div class="view zoom overlay z-depth-2 rounded">
+                                    <img class="img-fluid w-100" src="{{ soup.image.url }}" alt="Sample">
+                                    <a href="#!">
+                                        <div class="mask">
+                                            <img class="img-fluid w-100" src="{{ soup.image.url }}">
+                                            <div class="mask rgba-black-slight"></div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="text-center pt-4">
+
+                                    <h5>{{ soup.name }}</h5>
+                                    <p class="mb-2 text-muted text-uppercase small"></p>
+                                    <ul class="rating">
+                                    </ul>
+                                    <hr>
+                                    <h6 class="mb-3">₹. {{ soup.price }}</h6>
+                                    <p>{{ soup.description }}</p>
+                                    <!-- Material unchecked -->
+                                    <div class="form-check">
+                                        <input type="checkbox" name="items[]" value="{{ soup.pk }}"
+                                            class="form-check-input" id="materialUnchecked">
+                                        <label class="form-check-label" for="materialUnchecked">Add</label>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <!-- Card -->
+
+                        </div>
+                        <!-- Grid column -->
+{% endfor %}
+                    </div>
+                    <!-- Grid row -->
+                   
+                </section>
+                <!--Section: Block Content-->
+
+
+
+                <!--Section: Block Content-->
+                <section>
+                    
+
+                    <!-- Grid row -->
+                    <div class="row">
+{% for dessert in desserts %}
+                        <!-- Grid column -->
+                        <div class="col-md-4 mb-5">
+
+                            <!-- Card -->
+                            <div class="">
+
+                                <div class="view zoom overlay z-depth-2 rounded">
+                                    <img class="img-fluid w-100" src="{{ dessert.image.url }}" alt="Sample">
+                                    <a href="#!">
+                                        <div class="mask">
+                                            <img class="img-fluid w-100" src="{{ dessert.image.url }}">
+                                            <div class="mask rgba-black-slight"></div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="text-center pt-4">
+
+                                    <h5>{{ dessert.name }}</h5>
+                                    <p class="mb-2 text-muted text-uppercase small"></p>
+                                    <ul class="rating">
+                                    </ul>
+                                    <hr>
+                                    <h6 class="mb-3">₹. {{ dessert.price }}</h6>
+                                    <p>{{ dessert.description }}</p>
+                                    <!-- Material unchecked -->
+                                    <div class="form-check">
+                                        <input type="checkbox" name="items[]" value="{{ dessert.pk }}"
+                                            class="form-check-input" id="materialUnchecked">
+                                        <label class="form-check-label" for="materialUnchecked">Add</label>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <!-- Card -->
+
+                        </div>
+                        <!-- Grid column -->
+{% endfor %}
+                    </div>
+                    <!-- Grid row -->
+                 
+                </section>
+                <!--Section: Block Content-->
+
+
+                <!--Section: Block Content-->
+                <section>
+                   
+
+                    <!-- Grid row -->
+                    <div class="row">
+{% for drink in drinks %}
+                        <!-- Grid column -->
+                        <div class="col-md-4 mb-5">
+
+                            <!-- Card -->
+                            <div class="">
+
+                                <div class="view zoom overlay z-depth-2 rounded">
+                                    <img class="img-fluid w-100" src="{{ drink.image.url }}" alt="Sample">
+                                    <a href="#!">
+                                        <div class="mask">
+                                            <img class="img-fluid w-100" src="{{ drink.image.url }}">
+                                            <div class="mask rgba-black-slight"></div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="text-center pt-4">
+
+                                    <h5>{{ drink.name }}</h5>
+                                    <p class="mb-2 text-muted text-uppercase small"></p>
+                                    <ul class="rating">
+                                    </ul>
+                                    <hr>
+                                    <h6 class="mb-3">₹. {{ drink.price }}</h6>
+                                    <p>{{ drink.description }}</p>
+                                    <!-- Material unchecked -->
+                                    <div class="form-check">
+                                        <input type="checkbox" name="items[]" value="{{ drink.pk }}"
+                                            class="form-check-input" id="materialUnchecked">
+                                        <label class="form-check-label" for="materialUnchecked">Add</label>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <!-- Card -->
+
+                        </div>
+                        <!-- Grid column -->
+{% endfor %}
+                    </div>
+                    <!-- Grid row -->
+                    
+                </section>
+                <!--Section: Block Content-->
+
+                <div class="form-group pt-3">
+                    <b><label for="name">Full Name</label>
+                    <input required class="form-control" type="text" placeholder="Your Name" name="name" />
+                </div>
+
+
+                <div class="form-group pt-3">
+                    <label for="phone">Mobile Number</label>
+                    <input required class="form-control" type="tel" placeholder="1234567890" name="phone" pattern="[0-9]{10}"/>
+                </div>
+
+                <div class="btn-group">
+
+                <div class="form-check form-check-inline">
+  <input
+    class="form-check-input"
+    type="radio"
+    name="inlineRadioOptions"
+    id="inlineRadio1"
+    value="option1"
+  />
+  <label class="form-check-label" for="inlineRadio1">Dine in</label>
+</div>
+
+<div class="form-check form-check-inline">
+  <input
+    class="form-check-input"
+    type="radio"
+    name="inlineRadioOptions"
+    id="inlineRadio2"
+    value="option2"
+  />
+  <label class="form-check-label" for="inlineRadio2">Take away</label>
+</div>
+
+
+               <br>
+
+                
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#submitModal">
+                    Submit Order!
+                </button>
+                <!-- <button class="btn btn-dark mt-5">Place Order!</button> -->
+
+                <!-- Modal -->
+                <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="submitModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="submitModalLabel">Submit Your Order!</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-light" data-dismiss="modal">Go Back</button>
+                                <button type="submit" class="btn btn-dark">Place Order!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
