@@ -61,7 +61,7 @@ class Order(View):
             item_ids = []
 
         for item in order_items['items']:
-            price = item['price'] +2
+            price += item['price']
             item_ids.append(item['id'])
 
         order = OrderModel.objects.create(
